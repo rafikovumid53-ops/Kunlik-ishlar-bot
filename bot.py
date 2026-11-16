@@ -3,14 +3,16 @@
 # E'lon berish BEPUL, Kontakt (telefon) ko'rish PULLIK
 # Kutubxona: pip install pyTelegramBotAPI
 
+import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import sqlite3
 
 # ============ SOZLAMALAR ============
-TOKEN = "8623153255:AAGh_3cMuCIJg_N2e94O4H2aXNMaA59-UXw"
+TOKEN = os.getenv("TOKEN")
 ADMIN_ID = 8900786771
-VISA_KARTA = "4413597607507256"
+VISA_KARTA = "4022 XXXX XXXX XXXX"
+
 KARTA_EGASI = "RAFIKOVU"
 KONTAKT_NARXI = "15 000 so'm"
 # ====================================
