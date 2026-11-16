@@ -8,10 +8,10 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import sqlite3
 
 # ============ SOZLAMALAR ============
-TOKEN = "BU_YERGA_YANGI_TOKENNI_QOY"
+TOKEN = "8623153255:AAGh_3cMuCIJg_N2e94O4H2aXNMaA59-UXw"
 ADMIN_ID = 8900786771
-VISA_KARTA = "4022 XXXX XXXX XXXX"
-KARTA_EGASI = "ISMING"
+VISA_KARTA = "4413597607507256"
+KARTA_EGASI = "RAFIKOVU"
 KONTAKT_NARXI = "15 000 so'm"
 # ====================================
 
