@@ -17,7 +17,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def keep_alive():
     port = int(os.environ.get("PORT", 10000))
-        server = HTTPServer(("0.0.0.0", port), Handler)
+    server = HTTPServer(("0.0.0.0", port), Handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
 # ============ SOZLAMALAR ============
 TOKEN = os.getenv("TOKEN")
