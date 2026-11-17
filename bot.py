@@ -7,7 +7,18 @@ import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import sqlite3
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"OK")
 
+def keep_alive():
+    port = int(os.environ.get("PORT", 10000))
+        server = HTTPServer(("0.0.0.0", port), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
 # ============ SOZLAMALAR ============
 TOKEN = os.getenv("TOKEN")
 ADMIN_ID = 8900786771
@@ -174,6 +185,6 @@ def kontakt_rad(c):
 def yordam(c):
     bot.send_message(c.message.chat.id, "Savol bo'lsa adminga yozing: @aristokrat6561")
     bot.answer_callback_query(c.id)
-
+keep_alive()
 print("Bot ishga tushdi...")
 bot.infinity_polling()
