@@ -22,7 +22,7 @@ def keep_alive():
 # ============ SOZLAMALAR ============
 TOKEN = os.getenv("TOKEN")
 ADMIN_ID = 8900786771
-VISA_KARTA = "4022 XXXX XXXX XXXX"
+VISA_KARTA = "4413 5976 0750 7256"
 
 KARTA_EGASI = "RAFIKOVU"
 KONTAKT_NARXI = "15 000 so'm"
